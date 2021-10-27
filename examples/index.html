@@ -2,43 +2,75 @@
   <head>
     <title>Prism at George Jenkins</title>
     <meta name="description" content="Homepage for the Prism concert series at George Jenkins"></meta>
+    <!-- Load an icon library -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+    		/* Modern Font */
+    		@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'); 	
+    		
+    		/* Set font and color for entire page */
       body {
         margin: 0px;
         background-color: rgb(250,250,250);
         position: relative;
         min-height: 100vh;
+        
+        font-family: 'Lato', sans-serif;
       }
+      
+      /* Semi transparent nav bar at top */
       header {
-   	    background-color: rgba(255,255,255,0.2);
-   	    position:fixed;
-    	   top:0;
- 	      left:0;
-    	   right:0;
-        height: 20px;
-     	}
-     	main {
+        background-color: rgba(255,255,255,0.2);
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        height: 40px;
+      }
+      
+      /* Container needed for footer */
+      main {
         margin: 0;
-        margin-top: 20px;
-        background-color: rgb(255, 200, 200);
+        margin-top: 40px;
         padding-bottom: 2.5rem
       }
+      
+      /* Footer with nav and copyright info */
       footer {
-      		position: absolute;
-      		bottom: 0;
-      		width: 100%;
-      		height: 2.5rem; 
-      		background-color: rgba(255,255,255,0.2); 
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem; 
+        background-color: rgba(255,255,255,0.2); 
       }
     </style>
   </head>
   <body>
     <header>
         <span class="logo">Logo</span>
-        <nav class="nav"><a href="/">Home</a></nav> 
+        <nav class="nav">
+        				<a href="/">Home</a>
+        				<a href="#news">News</a>
+        				<a href="#contact">Contact</a>
+        				<a href="#about">About</a>
+        				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        								<i class="fa fa-bars"></i>
+        			 </a>
+        </nav> 
     </header>
     <main>
-        <h1>Prism at George Jenkins</h1>
+    				<div class="slideshow">
+    								Slideshow Filler
+    				</div>
+    				<div class="about">
+    								<h1>Prism at George Jenkins</h1>
+    				</div>
+        <div class="upcoming">
+        				Upcoming Filler
+        </div>
+        <div class="register">
+        				Register Filler
+        </div>
     </main> 
     <footer>
     				<p>© 2021 Tyson McLaws and Pierre Etienne Boisvert, All Rights Reserved </p>
