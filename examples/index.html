@@ -1,79 +1,185 @@
 <html>
-  <head>
-    <title>Prism at George Jenkins</title>
-    <meta name="description" content="Homepage for the Prism concert series at George Jenkins"></meta>
-    <!-- Load an icon library -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-    		/* Modern Font */
-    		@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'); 	
-    		
-    		/* Set font and color for entire page */
-      body {
-        margin: 0px;
-        background-color: rgb(250,250,250);
-        position: relative;
-        min-height: 100vh;
-        
-        font-family: 'Lato', sans-serif;
-      }
-      
-      /* Semi transparent nav bar at top */
-      header {
-        background-color: rgba(255,255,255,0.2);
-        position:fixed;
-        top:0;
-        left:0;
-        right:0;
-        height: 40px;
-      }
-      
-      /* Container needed for footer */
-      main {
-        margin: 0;
-        margin-top: 40px;
-        padding-bottom: 2.5rem
-      }
-      
-      /* Footer with nav and copyright info */
-      footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 2.5rem; 
-        background-color: rgba(255,255,255,0.2); 
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-        <span class="logo">Logo</span>
-        <nav class="nav">
-        				<a href="/">Home</a>
-        				<a href="#news">News</a>
-        				<a href="#contact">Contact</a>
-        				<a href="#about">About</a>
-        				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        								<i class="fa fa-bars"></i>
-        			 </a>
-        </nav> 
-    </header>
-    <main>
-    				<div class="slideshow">
-    								Slideshow Filler
-    				</div>
-    				<div class="about">
-    								<h1>Prism at George Jenkins</h1>
-    				</div>
-        <div class="upcoming">
-        				Upcoming Filler
-        </div>
-        <div class="register">
-        				Register Filler
-        </div>
-    </main> 
-    <footer>
-    				<p>© 2021 Tyson McLaws and Pierre Etienne Boisvert, All Rights Reserved </p>
-    </footer>
-  </body>
+
+<head>
+	<title>Prism at George Jenkins</title>
+	<meta name="description" content="Homepage for the Prism concert series at George Jenkins">
+	</meta>
+
+	<!-- Load an icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+		/* Modern Font */
+		@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+		/* Set font and color for entire page */
+		body {
+			margin: 0px;
+			background-color: rgb(250, 250, 250);
+			position: relative;
+			min-height: 100vh;
+
+			font-family: 'Lato', sans-serif;
+		}
+
+		/* Semi transparent nav bar at top */
+		nav {
+			background-color: rgba(255, 255, 255, 0.2);
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			overflow: hidden;
+		}
+
+		nav a {
+			float: right;
+			display: block;
+			color: red;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		nav a.active {
+			background-color: #04AA6D;
+			color: white;
+		}
+
+		/* Hide the link that should open and close the topnav on small screens */
+		nav .icon {
+			padding-bottom: 17.5px;
+			display: none;
+		}
+
+		html[data-scroll='0'] nav a {
+			color: white;
+		}
+
+		html:not([data-scroll='0']) nav {
+			box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+		}
+
+		/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+		@media screen and (max-width: 600px) {
+			.nav a:not(:first-child) {
+				display: none;
+			}
+
+			.nav a.icon {
+				float: right;
+				display: block;
+			}
+		}
+
+		/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+		@media screen and (max-width: 600px) {
+			.nav.responsive {
+				position: relative;
+			}
+
+			.nav.responsive a.icon {
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+
+			.nav.responsive a {
+				float: none;
+				display: block;
+				text-align: left;
+			}
+		}
+
+		/* Container needed for footer */
+		main {
+			margin: 0;
+			padding-bottom: 2.5rem;
+		}
+
+		.slideshow {
+			background-color: orange;
+			padding: 500px;
+		}
+
+		.about {
+			background-color: green;
+			padding: 500px;
+		}
+
+		.upcoming {
+			background-color: blue;
+			padding: 500px;
+		}
+
+		.register {
+			background-color: yellow;
+			padding: 500px;
+		}
+
+		/* Footer with nav and copyright info */
+		footer {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 2.5rem;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="nav">
+		<a href="/" style="float:left;">Home</a>
+		<a href="#register">Register</a>
+		<a href="#about">About</a>
+		<a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</nav>
+	<main>
+		<div class="slideshow">
+			Slideshow Filler
+		</div>
+		<div class="about">
+			<h1>Prism at George Jenkins</h1>
+		</div>
+		<div class="upcoming">
+			Upcoming Filler
+		</div>
+		<div class="register">
+			Register Filler
+		</div>
+	</main>
+	<footer>
+		<p>© 2021 Tyson McLaws and Pierre Etienne Boisvert, All Rights Reserved </p>
+	</footer>
+
+	<script>
+		// Write scroll position to <html> for shadow on scroll
+		// Gets original position and triggers on page scroll
+		document.documentElement.dataset.scroll = window.scrollY;
+		document.addEventListener("scroll", () => {
+			document.documentElement.dataset.scroll = window.scrollY;
+		});
+
+		// Coverts the nav bar to responsive
+		function myFunction() {
+			var x = document.getElementByTagName("nav")[0];
+			if (x.className === "nav") {
+				x.className += " responsive";
+			} else {
+				x.className = "nav";
+			}
+		}
+	</script>
+</body>
+
 </html>
