@@ -17,11 +17,12 @@
 
 		/* Set font and color for entire page */
 		body {
-			margin: 0px;
+			margin: 0;
+			padding: 0;
 			background-color: rgb(250, 250, 250);
 			position: relative;
 			min-height: 100vh;
-
+			
 			font-family: 'Lato', sans-serif;
 		}
 
@@ -112,11 +113,11 @@
 			width: 100%;
 			height: 10rem;
 			padding: 10px 10px;
-			background-color: rgba(255, 255, 255, 0.2);
+			background-color: rgba(255, 0, 255, 0.2);
 			box-sizing: border-box;
 		}
 
-		footer .left {
+		/* footer .left {
 			float: left;
 			padding: 10px;
 			width: 20%;
@@ -126,7 +127,7 @@
 			float: right;
 			padding: 10px;
 			width: 80%;
-		}
+		} */
 
 		/* Mobile Styles */
 		@media (max-width: 600px) {
@@ -152,13 +153,10 @@
 			}
 
 			/* Makes a one column layout instead of a two-column layout for footer */
-			footer {
-				background-color: rgb(255, 100, 200);
-			}
-			footer .left, footer .right{
+			/* footer .left, footer .right{
 				float: none;
 				width: 100%;
-			}
+			} */
 		}
 	</style>
 </head>
@@ -201,7 +199,7 @@
 
 		// Coverts the nav bar to responsive
 		function responsiveNavbar() {
-			document.getElementsByTagName("nav").forEach(x => {
+			[...document.getElementsByTagName("nav")].forEach(x => {
 				if (x.className === "nav") {
 					x.className += " responsive";
 				} else {
