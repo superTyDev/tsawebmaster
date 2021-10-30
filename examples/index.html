@@ -24,11 +24,12 @@
 
 		<style>
 			/* Modern Font */
-			@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+			@import url("assets/lato.css");
 
-   html,body{
-      overflow-x: hidden;
-   }
+			html,
+			body {
+				overflow: hidden overlay;
+			}
 
 			/* Set font and color for entire page */
 			body {
@@ -37,8 +38,7 @@
 				background-color: rgb(250, 250, 250);
 				position: relative;
 				min-height: 100vh;
-				
-				
+
 				font-family: "Lato", sans-serif;
 			}
 
@@ -97,13 +97,15 @@
 			}
 
 			/* Content container needed for footer */
-			main {		 
+			main {
 				margin: 0;
 				padding-bottom: 10rem;
 			}
 
 			.slideshow {
 				width: 100%;
+				height: 75vh;
+				overflow: hidden;
 				background-color: #03a9f4;
 				position: relative;
 			}
@@ -112,13 +114,15 @@
 				display: none;
 			}
 
-			.slide video {
+			.slide video,
+			.slide img {
 				width: 100%;
-				bottom: 0;
+				height: 75vh;
+				object-fit: cover;
 			}
 
 			.prev,
-			.next {
+			.slideshow .next {
 				cursor: pointer;
 				position: absolute;
 				top: 50%;
@@ -134,28 +138,50 @@
 			}
 
 			/* Position the "next button" to the right */
-			.next {
+			.slideshow .next {
 				right: 0;
 				border-radius: 3px 0 0 3px;
 			}
 
 			/* On hover, add a black background color with a little bit see-through */
-			.prev:hover,
-			.next:hover {
+			.slideshow .prev:hover,
+			.slideshow .next:hover {
 				background-color: rgba(0, 0, 0, 0.8);
 			}
 
 			/* Caption text */
-			.text {
-				color: #f2f2f2;
-				font-size: 15px;
-				padding: 8px 12px;
+			.slide .text {
 				position: absolute;
-				bottom: 8px;
-				width: 100%;
+				transform: translate(-50%, 0);
+				left: 50%;
+				bottom: 12px;
+				min-width: 300px;
+				width: 40%;
+				max-width: 500px;
+				padding: 8px 40px;
+				box-sizing: border-box;
+
+				color: #f2f2f2;
+				background-color: #bbbbbb88;
+				font-size: 15px;
+				border-radius: 2px;
+
 				text-align: center;
-				background-color: #03a9f4;
 				z-index: 1;
+			}
+
+			.button {
+				text-decoration: none;
+				padding: 5px 10px;
+				color: #ffa000;
+				border: currentColor solid 2px;
+				box-shadow: 5px 10px 10px #888888;
+			}
+
+			.button:hover {
+				color: white;
+				background-color: #ffa000;
+				box-shadow: none;
 			}
 
 			/* Fading animation */
@@ -186,7 +212,54 @@
 
 			.about {
 				background-color: green;
+			}
+
+			.parallax {
+				/* The image used */
+				background-image: url("assets/gjhs.jpg");
+
+				/* Set a specific dimenstions */
+				min-height: 500px;
+				max-height: 40vh;
+				object-fit: cover;
+				width: 100%;
+
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+
 				padding: 200px 0;
+			}
+
+			.about .text {
+				font-size: 7vw;
+				font-weight: 900;
+				font-family: "Lato Thick", sans-serif;
+				text-align: center;
+				mix-blend-mode: screen; /* Makes cutout text possible */
+
+				background-color: white;
+				color: black;
+
+				margin: 0 auto;
+				padding: 10px;
+				width: 80%;
+			}
+
+			.about p {
+				font-size: 20px;
+				font-weight: bold;
+				font-family: "Lato Thick", sans-serif;
+				line-height: 40px;
+				letter-spacing: 5px;
+
+				color: white;
+				text-shadow: 2px 2px 4px #000000;
+				margin: 20px auto;
+				padding: 10px;
+				width: 80%;
 			}
 
 			.upcoming {
@@ -196,7 +269,40 @@
 
 			.register {
 				background-color: yellow;
-				padding: 200px 0;
+				position: relative;
+				height: 500px;
+			}
+
+			.register .square {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				width: min(40%, 40%);
+				height: min(40%, 40%);
+				padding: 20px;
+				text-align: center;
+				border-radius: 2px;
+				background-color: #03a9f4;
+			}
+
+			@media (prefers-reduced-motion: no-preference) {
+				.register .square {
+					/* animation-name: wipe-enter; */
+					animation-duration: 1s;
+					animation-iteration-count: infinite;
+				}
+			}
+
+			/* Trigger when scrolled into view */
+			@keyframes wipe-enter {
+				0% {
+					transform: scale(0, 0.025);
+				}
+				50% {
+					transform: scale(1, 0.025);
+				}
 			}
 
 			/* Footer with nav and copyright info */
@@ -250,12 +356,38 @@
 					color: white;
 				}
 
+				.slide .text {
+					width: 100vw;
+					border-radius: 0;
+				}
+
 				/* Makes a one column layout instead of a two-column layout for footer */
 				footer .left,
 				footer .right {
 					float: none;
 					width: 100%;
 				}
+			}
+
+			/* Scrollbar Width */
+			::-webkit-scrollbar {
+				width: 5px;
+			}
+
+			/* Track */
+			::-webkit-scrollbar-track {
+				box-shadow: inset 0 0 5px grey;
+			}
+
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+				background-color: #ffa20088;
+				border-radius: 5px;
+			}
+
+			/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+				background: #ffa000;
 			}
 		</style>
 	</head>
@@ -274,26 +406,45 @@
 			<div class="slideshow">
 				<div class="slide fade">
 					<video autoplay muted loop>
-						<source src="assets/waterfall.mp4" type="video/mp4" />
-						Waterfall Timelapse [Unsupported Browser]
+						<source src="assets/winter.mp4" type="video/mp4" />
+						Winter Timelapse [Unsupported Browser]
 					</video>
-					<div class="text">Waterfall Timelapse</div>
+					<div class="text">
+						<h2>Winter Timelapse</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+							sit amet urna blandit, eleifend massa id, elementum velit. Quisque
+							rutrum pretium augue, eget congue sapien sollicitudin quis.
+						</p>
+					</div>
 				</div>
 
 				<div class="slide fade">
 					<video autoplay muted loop>
-						<source src="assets/planet.mp4" type="video/mp4" />
-						Planet Mars from Space [Unsupported Browser]
+						<source src="assets/world.mp4" type="video/mp4" />
+						World Tour [Unsupported Browser]
 					</video>
-					<div class="text">Planet Mars from Space</div>
+					<div class="text">
+						<h2>World Tour</h2>
+						<p>
+							Donec non commodo enim, nec condimentum nulla. Fusce nulla dui,
+							commodo non metus nec, facilisis blandit lectus.
+						</p>
+					</div>
 				</div>
 
 				<div class="slide fade">
 					<video autoplay muted loop>
-						<source src="assets/fire.mp4" type="video/mp4" />
-						Fire Timelapse [Unsupported Browser]
+						<source src="assets/sailing.mp4" type="video/mp4" />
+						Sailing Timelapse [Unsupported Browser]
 					</video>
-					<div class="text">Fire Timelapse</div>
+					<div class="text">
+						<h2>Sailing Timelapse</h2>
+						<p>
+							Morbi non sapien justo. Cras quis rutrum urna, vitae ornare
+							turpis.
+						</p>
+					</div>
 				</div>
 
 				<!-- Next and previous buttons -->
@@ -301,10 +452,26 @@
 				<a class="next" onclick="plusSlides(1)">&#10095;</a>
 			</div>
 			<div class="about">
-				<h1>Prism at George Jenkins</h1>
+				<div class="parallax">
+					<h1 class="text">Prism at George Jenkins</h1>
+					<p>
+						Curabitur eget dapibus dolor. Suspendisse placerat turpis in erat
+						pretium tempor. Mauris pharetra erat porttitor sollicitudin
+						vulputate. Etiam posuere elit non sagittis posuere. Mauris libero
+						magna, pharetra ac quam nec, aliquet tempus sapien. Sed odio erat,
+						ultricies ac faucibus vitae, molestie nec lacus. Donec aliquet
+						dignissim risus.
+					</p>
+				</div>
 			</div>
 			<div class="upcoming">Upcoming Filler</div>
-			<div class="register">Register Filler</div>
+			<div class="register">
+				<div class="square">
+					<h2>Register</h2>
+					<p>Come join the party!</p>
+					<a class="button">Get Registered</a>
+				</div>
+			</div>
 		</main>
 		<footer>
 			<div class="left">Prism at George Jenkins</div>
@@ -334,6 +501,9 @@
 
 			var slideIndex = 1;
 			showSlides(slideIndex);
+			setInterval(function () {
+				plusSlides(1);
+			}, 10000);
 
 			// Next/previous controls
 			function plusSlides(n) {
