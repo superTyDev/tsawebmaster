@@ -176,8 +176,8 @@
 				padding: 5px 10px;
 				color: #ffa000;
 				border: #ffa000 solid 2px;
-				box-shadow: 5px 5px 10px grey;
-			}
+				box-shadow: 5px 5px 10px #00000066;
+		 }
 
 			.button:hover {
 				color: white;
@@ -221,7 +221,6 @@
 
 				/* Set a specific dimenstions */
 				min-height: 500px;
-				max-height: 40vh;
 				object-fit: cover;
 				width: 100%;
 
@@ -231,7 +230,7 @@
 				background-repeat: no-repeat;
 				background-size: cover;
 
-				padding: 200px 0;
+				padding: 100px 0;
 			}
 
 			.about .text {
@@ -300,7 +299,7 @@
 
 			@media (prefers-reduced-motion: no-preference) {
 				.register .square {
-					/* animation-name: wipe-enter; */
+					animation-name: wipe-enter;
 					animation-duration: 1s;
 					animation-iteration-count: infinite;
 				}
@@ -427,7 +426,9 @@
 							sit amet urna blandit, eleifend massa id, elementum velit. Quisque
 							rutrum pretium augue, eget congue sapien sollicitudin quis.
 						</p>
-						<a class="button">See More</a>
+						<p>
+										<a class="button" href="#seemore">See More</a>
+						</p>
 					</div>
 				</div>
 
@@ -442,6 +443,9 @@
 							Donec non commodo enim, nec condimentum nulla. Fusce nulla dui,
 							commodo non metus nec, facilisis blandit lectus.
 						</p>
+						<p>
+										<a class="button" href="#seemore">See More</a>
+						</p>
 					</div>
 				</div>
 
@@ -455,6 +459,61 @@
 						<p>
 							Morbi non sapien justo. Cras quis rutrum urna, vitae ornare
 							turpis.
+						</p>
+						<p>
+										<a class="button" href="#seemore">See More</a>
+						</p>
+					</div>
+				</div>
+				
+				<div class="slide fade">
+					<video autoplay muted loop>
+						<source src="assets/earth.mp4" type="video/mp4" />
+						Earth From Space [Unsupported Browser]
+					</video>
+					<div class="text">
+						<h2>Earth From Space</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+							sit amet urna blandit, eleifend massa id, elementum velit. Quisque
+							rutrum pretium augue, eget congue sapien sollicitudin quis.
+						</p>
+						<p>
+										<a class="button" href="#seemore">See More</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="slide fade">
+					<video autoplay muted loop>
+						<source src="assets/waterfall.mp4" type="video/mp4" />
+						Waterfall Timelapse [Unsupported Browser]
+					</video>
+					<div class="text">
+						<h2>Waterfall Timelapse</h2>
+						<p>
+							Donec non commodo enim, nec condimentum nulla. Fusce nulla dui,
+							commodo non metus nec, facilisis blandit lectus.
+						</p>
+						<p>
+										<a class="button" href="#seemore">See More</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="slide fade">
+					<video autoplay muted loop>
+						<source src="assets/fire.mp4" type="video/mp4" />
+						Fire Flies [Unsupported Browser]
+					</video>
+					<div class="text">
+						<h2>Fire Flies</h2>
+						<p>
+							Morbi non sapien justo. Cras quis rutrum urna, vitae ornare
+							turpis.
+						</p>
+						<p>
+										<a class="button" href="#seemore">See More</a>
 						</p>
 					</div>
 				</div>
