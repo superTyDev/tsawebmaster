@@ -264,8 +264,37 @@
 
 			.upcoming {
 				background-color: blue;
-				padding: 200px 0;
+				padding: 20px;
 			}
+			
+			.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-color: white;
+  overflow: auto;
+}
+
+.card img {
+float: left;
+border-radius: 5px;
+height: 30vw;
+width: 30vw;
+object-fit: cover;
+overflow: auto;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 10px 16px;
+  float: left;
+}
 
 			.register {
 				background-color: yellow;
@@ -299,7 +328,7 @@
 
 			@media (prefers-reduced-motion: no-preference) {
 				.register .square {
-					animation-name: wipe-enter;
+					<!-- animation-name: wipe-enter; -->
 					animation-duration: 1s;
 					animation-iteration-count: infinite;
 				}
@@ -529,18 +558,25 @@
 						Curabitur eget dapibus dolor. Suspendisse placerat turpis in erat
 						pretium tempor. Mauris pharetra erat porttitor sollicitudin
 						vulputate. Etiam posuere elit non sagittis posuere. Mauris libero
-						magna, pharetra ac quam nec, aliquet tempus sapien. Sed odio erat,
-						ultricies ac faucibus vitae, molestie nec lacus. Donec aliquet
-						dignissim risus.
+						magna, pharetra ac quam nec, aliquet tempus sapien.
 					</p>
 				</div>
 			</div>
-			<div class="upcoming">Upcoming Filler</div>
+			<div class="upcoming">
+							<h2>Upcoming Filler</h2>
+							<div class="card">
+  <img src="assets/orchestra.jpg" alt="Avatar">
+  <div class="container">
+    <h4><b>John Doe</b></h4>
+    <p>Architect & Engineer</p>
+  </div>
+</div>
+			</div>
 			<div class="register">
 				<div class="square">
-					<h2>Register</h2>
+					<h2>Get Registered</h2>
 					<p>Come join the party!</p>
-					<a class="button">Get Registered</a>
+					<a class="button">Register</a>
 				</div>
 			</div>
 		</main>
