@@ -129,7 +129,7 @@
 				width: auto;
 				margin-top: -22px;
 				padding: 16px;
-				color: white;
+				color: #ffffff88;
 				font-weight: bold;
 				font-size: 18px;
 				transition: 0.6s ease;
@@ -146,7 +146,8 @@
 			/* On hover, add a black background color with a little bit see-through */
 			.slideshow .prev:hover,
 			.slideshow .next:hover {
-				background-color: rgba(0, 0, 0, 0.8);
+			 color: white;
+				background-color: rgba(0, 0, 0, 0.5);
 			}
 
 			/* Caption text */
@@ -263,7 +264,6 @@
 			}
 
 			.upcoming {
-				background-color: blue;
 				padding: 20px;
 			}
 			
@@ -274,13 +274,14 @@
   border-radius: 5px;
   background-color: white;
   overflow: auto;
+  margin: 20px 0;
 }
 
 .card img {
 float: left;
 border-radius: 5px;
-height: 30vw;
-width: 30vw;
+height: max(18vw, 18vh);
+width: max(18vw, 18vh);
 object-fit: cover;
 overflow: auto;
 }
@@ -294,6 +295,8 @@ overflow: auto;
 .container {
   padding: 10px 16px;
   float: left;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 			.register {
@@ -399,6 +402,12 @@ overflow: auto;
 					width: 100vw;
 					border-radius: 0;
 				}
+				
+				.card img {
+								width: 100%;
+				}
+				
+				.card container {}
 
 				/* Makes a one column layout instead of a two-column layout for footer */
 				footer .left,
@@ -553,7 +562,7 @@ overflow: auto;
 			</div>
 			<div class="about">
 				<div class="parallax">
-					<h1 class="text">Prism at George Jenkins</h1>
+					<h1 class="text">Prism Concerts</h1>
 					<p>
 						Curabitur eget dapibus dolor. Suspendisse placerat turpis in erat
 						pretium tempor. Mauris pharetra erat porttitor sollicitudin
@@ -563,12 +572,23 @@ overflow: auto;
 				</div>
 			</div>
 			<div class="upcoming">
-							<h2>Upcoming Filler</h2>
+							<h2>Upcoming</h2>
 							<div class="card">
   <img src="assets/orchestra.jpg" alt="Avatar">
   <div class="container">
-    <h4><b>John Doe</b></h4>
-    <p>Architect & Engineer</p>
+    <h3><b>Panama Philharmonic on September 20</b></h3>
+    <p>Mauris pharetra erat porttitor sollicitudin
+						vulputate. Etiam posuere elit non sagittis posuere. Mauris libero
+						magna, pharetra ac quam nec, aliquet tempus sapien.</p>
+  </div>
+</div>
+<div class="card">
+  <img src="assets/orchestra.jpg" alt="Avatar">
+  <div class="container">
+    <h3><b>Culinary Cut-Out on October 6</b></h3>
+    <p>Mauris pharetra erat porttitor sollicitudin
+						vulputate. Etiam posuere elit non sagittis posuere. Mauris libero
+						magna, pharetra ac quam nec, aliquet tempus sapien.</p>
   </div>
 </div>
 			</div>
