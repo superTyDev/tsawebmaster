@@ -1,0 +1,29 @@
+{
+  "name": "tsawebmaster",
+  "version": "1.0.0",
+  "description": "A site for TSAWebmaster about the ficticious PRISM concert",
+  "scripts": {
+    "start": "node  ./server/server.js"
+  },
+  "author": "Tyson M",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superTyDev/tsawebmaster.git"
+  },
+  "keywords": [
+    "tsa",
+    "webmaster",
+    "prism"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superTyDev/tsawebmaster/issues"
+  },
+  "homepage": "https://github.com/superTyDev/tsawebmaster#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "open-easyrtc": "^2.0.11",
+    "socket.io": "^0.9.19"
+  }
+}
