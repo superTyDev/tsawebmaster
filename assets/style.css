@@ -193,7 +193,7 @@ main {
 
 .parallax {
 	/* The image used */
-	background-image: url("assets/gjhs.jpg");
+	background-image: url("gjhs.jpg");
 
 	/* Set a specific dimenstions */
 	min-height: 500px;
