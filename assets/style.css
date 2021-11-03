@@ -225,14 +225,6 @@ main {
 	width: 80%;
 }
 
-.anim_show {
-	animation: show 5s ease-in-out;
-}
-
-.hid {
-	opacity: 0;
-}
-
 .upcoming {
 	padding: 20px;
 }
@@ -432,16 +424,5 @@ footer .right {
 	}
 	to {
 		opacity: 1;
-	}
-}
-
-@keyframes show {
-	from {
-		opacity: 0;
-		transform: scale(500%, 500%);
-	}
-	to {
-		opacity: 1;
-		transform: scale(100%, 100%);
 	}
 }
