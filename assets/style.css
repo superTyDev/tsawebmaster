@@ -212,11 +212,11 @@ main {
 }
 
 .about p {
-	font-size: 2vw; /* 4 */
+	font-size: 20px; /* 4 */
 	font-weight: bold;
 	font-family: "Lato Thick", sans-serif;
-	line-height: 4vw; /* 8 */
-	letter-spacing: 0.5vw; /* 1 */
+	line-height: 40px; /* 8 */
+	letter-spacing: 5px; /* 1 */
 
 	color: white;
 	text-shadow: 2px 2px 4px #000000;
