@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+
+	background-color: #121212;
+	color: white;
+	font-family: 'Zen Kurenaido', sans-serif;
+}
+
+header {
+	background-color: #23ac551a;
+}
+
+nav {
+	background-color: #ffffff1d;
+	color: red;
+	position: relative;
+	overflow: hidden;
+}
+
+nav a {
+	float: left;
+	color: #d32f2f;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.nav-centered a {
+	float: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  
+  .nav-right {
+	float: right;
+  }
+
+nav a:hover {
+	background-color: #ff6659;
+	color: black;
+}
+
+nav .icon {
+	display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+	.topnav a, .topnav-right {
+		float: none;
+		display: block;
+	  }
+	  
+	  .topnav-centered a {
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: none;
+	  }
+
+	/* Makes a one column layout instead of a two-column layout for footer */
+	footer .left,
+	footer .right {
+		float: none;
+		width: 100%;
+	}
+}
+
+/* Scrollbar Width */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background-color: #ffa20088;
+	border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #ffa000;
+}
+
+.content {
+	padding: 16px;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.sticky+.content {
+	padding-top: 60px;
+}
+
+main {
+	height: 100vh;
+}

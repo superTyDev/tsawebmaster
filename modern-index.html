@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Homepage for the Prism concert series at George Jenkins" />
 
-	<title>Prism at George Jenkins</title>
+	<title>Prism Concert</title>
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="assets/prism.ico" />
@@ -18,126 +18,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 	<!-- Load main styles -->
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
-
-		body {
-			margin: 0;
-			padding: 0;
-
-			background-color: #121212;
-			color: white;
-			font-family: 'Zen Kurenaido', sans-serif;
-		}
-
-		header {
-			background-color: #23ac551a;
-		}
-
-		nav {
-			background-color: #ffffff1d;
-			color: red;
-			overflow: auto;
-			white-space: nowrap;
-		}
-
-		nav a {
-			display: inline-block;
-			color: #d32f2f;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-size: 20px;
-			font-weight: bold;
-		}
-
-		nav a:first-child {
-			float: left;
-		}
-
-		nav a:hover {
-			background-color: #ff6659;
-			color: black;
-		}
-
-		nav .icon {
-			display: none;
-		}
-
-		/* Mobile Styles */
-		@media (max-width: 600px) {
-			.nav a:not(:first-child) {
-				display: none;
-			}
-
-			.nav a.icon {
-				float: right;
-				display: block;
-			}
-
-			.nav.responsive {
-				background-color: #d32f2f;
-				overflow-x: scroll;
-			}
-
-			.nav.responsive a.icon {
-				float: right;
-			}
-
-			.nav.responsive a {
-				float: left;
-				display: inline;
-				text-align: center;
-				color: white;
-			}
-
-			/* Makes a one column layout instead of a two-column layout for footer */
-			footer .left,
-			footer .right {
-				float: none;
-				width: 100%;
-			}
-		}
-
-		/* Scrollbar Width */
-		::-webkit-scrollbar {
-			width: 5px;
-		}
-
-		/* Track */
-		::-webkit-scrollbar-track {
-			box-shadow: inset 0 0 5px grey;
-		}
-
-		/* Handle */
-		::-webkit-scrollbar-thumb {
-			background-color: #ffa20088;
-			border-radius: 5px;
-		}
-
-		/* Handle on hover */
-		::-webkit-scrollbar-thumb:hover {
-			background: #ffa000;
-		}
-
-		.content {
-			padding: 16px;
-		}
-
-		.sticky {
-			position: fixed;
-			top: 0;
-			width: 100%;
-		}
-
-		.sticky+.content {
-			padding-top: 60px;
-		}
-
-		main {
-			height: 100vh;
-		}
-	</style>
+	<link rel="stylesheet" href="assets/modern_style.css" />
 </head>
 
 <body>
@@ -145,10 +26,21 @@
 		header
 	</header>
 	<nav class="nav">
-		<a href="#home">Home</a>
-		<a href="#schedule">Schedule</a>
-		<a href="#register">Register</a>
+		<!-- Centered link -->
+		<div class="nav-centered">
+			<a href="#home" class="active">PRISM CONCERT</a>
+		</div>
+
+		<!-- Left-aligned links (default) -->
 		<a href="#about">About</a>
+		<a href="#schedule">Schedule</a>
+
+		<!-- Right-aligned links -->
+		<div class="nav-right">
+			<a href="#register">Register</a>
+			<a href="#login">Login</a>
+		</div>
+		
 		<a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
 			<i class="fa fa-bars"></i>
 		</a>
@@ -156,46 +48,12 @@
 	<main>
 		main
 	</main>
-	<footer>footer</footer>
-	<script>
-		window.onscroll = function () { myFunction() };
+	<main>
+		main extra
+	</main>
+	<footer>f<br>o<br>o<br>t<br>e<br>r</footer>
 
-		// Get the navbar
-		var navbar = document.getElementsByTagName("nav")[0];
-		var header = document.getElementsByTagName("header")[0];
-
-		// Get the offset position of the navbar
-		var sticky = navbar.offsetTop;
-		function placeNav (event) {
-			header.style.height = (parseInt(window.innerHeight) - parseInt(navbar.offsetHeight)).toString() + "px";
-			console.log(header.style.height);
-			navbar.style.height = navbar.offsetHeight + "px";
-			sticky = navbar.offsetTop;
-		}
-		placeNav();
-		window.addEventListener('resize', placeNav);
-
-
-
-		// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-		function myFunction() {
-			if (window.pageYOffset >= sticky) {
-				navbar.classList.add("sticky")
-			} else {
-				navbar.classList.remove("sticky");
-			}
-		}
-
-		function responsiveNavbar() {
-			[...document.getElementsByTagName("nav")].forEach((x) => {
-				if (x.className === "nav") {
-					x.className += " responsive";
-				} else {
-					x.className = "nav";
-				}
-			});
-		}
-	</script>
+	<script src="assets/modern_script.js"></script>
 </body>
 
 </html>
