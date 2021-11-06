@@ -28,7 +28,7 @@ header .info {
 	left: 20%;
 	top: 50%;
 	transform: translateY(-50%);
-	text-shadow: 0 0 4px #333333;
+	text-shadow: 0 0 4px #222;
 }
 
 header .info .title {
@@ -41,6 +41,38 @@ header .info .title h1 {
 
 header .info .slide {
 	display: none;
+}
+
+header .info h3 {
+	border: 2px solid #d32f2f;
+	padding: 10px 15px;
+	margin: 20px 0;
+	box-shadow: 3px 3px 5px #00000088, inset 3px 3px 3px #00000088;
+	border-radius: 2px;
+	transition: box-shadow 0.4s;
+	width: 200px;
+	text-align: center;
+}
+
+header .info h3:hover {
+	box-shadow: 1px 1px 5px #00000088, inset 1px 1px 3px #00000088;
+}
+
+.morebutton:hover .jump {
+	padding-right: 5px;
+	padding-left: 25px;
+}
+
+header .info a {
+	text-decoration: none;
+	color: white;
+}
+
+header .info .jump {
+	transition: padding 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	padding-right: 25px;
+	padding-left: 5px;
+	font-style: normal;
 }
 
 .fade {
