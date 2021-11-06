@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap");
 
 body {
 	margin: 0;
@@ -6,27 +6,31 @@ body {
 
 	background-color: #121212;
 	color: white;
-	font-family: 'Zen Kurenaido', sans-serif;
+	font-family: "Zen Kurenaido", sans-serif;
 }
 
 header {
-	background-color: #23ac551a;
+	background-color: #1c86439c;
+	height: 100vh;
+	transition: 0.4s;
 }
 
-nav, nav .holder {
-	background-color: #2E2E2E;
-    position: relative;
+nav,
+nav .holder {
+	position: relative;
 	overflow: hidden;
+	background-color: #2e2e2e;
 }
 
 nav a {
 	float: left;
 	color: #d32f2f;
 	text-align: center;
-	padding: 14px 16px;
 	text-decoration: none;
-	font-size: 20px;
 	font-weight: bold;
+	transition: 0.5s;
+	font-size: 25px;
+	padding: 20px 16px;
 }
 
 .nav-center a {
@@ -35,8 +39,8 @@ nav a {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-  }
-  
+}
+
 .nav-right {
 	float: right;
 }
@@ -58,9 +62,15 @@ nav .icon {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	height: 57px;
 }
 
-.sticky+.content {
+nav.sticky a {
+	padding: 14px 16px;
+	font-size: 20px;
+}
+
+.sticky + .content {
 	padding-top: 60px;
 }
 
@@ -91,18 +101,22 @@ main {
 
 /* Mobile Styles */
 @media (max-width: 600px) {
-    nav a {
-        display: none;
-    }
-    nav .icon, .nav-center a {
-        display: block;
-    }
-    
-	nav.responsive a, .nav-right {
+	nav a {
+		display: none;
+		padding: 14px 16px;
+		font-size: 20px;
+	}
+	nav .icon,
+	.nav-center a {
+		display: block;
+	}
+
+	nav.responsive a,
+	.nav-right {
 		float: none;
 		display: block;
 	}
-	
+
 	nav.responsive .nav-center a {
 		position: relative;
 		top: 0;
@@ -110,12 +124,12 @@ main {
 		transform: none;
 	}
 
-    nav.responsive.reverse {
-        overflow: visible;
-    }
-    nav.responsive.reverse .holder{
-        transform: translateY(-83.333%);
-    }
+	nav.responsive.reverse {
+		overflow: visible;
+	}
+	nav.responsive.reverse .holder {
+		transform: translateY(-83.333%);
+	}
 
 	/* Makes a one column layout instead of a two-column layout for footer */
 	footer .left,

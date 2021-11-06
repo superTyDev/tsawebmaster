@@ -7,18 +7,13 @@ window.onscroll = function () {
 	stickyNav();
 };
 window.addEventListener("resize", placeNav);
-
-placeNav();
+window.onload = setTimeout(placeNav, 100);
 
 // Get the offset position of the navbar
 function placeNav(event) {
 	header.style.height =
-		(
-			parseInt(window.innerHeight) -
-			parseInt(navbar.offsetHeight) -
-			5
-		).toString() + "px";
-	console.log(header.style.height);
+		(parseInt(window.innerHeight) - parseInt(navbar.offsetHeight)).toString() +
+		"px";
 	sticky = navbar.offsetTop;
 }
 
@@ -30,7 +25,6 @@ function stickyNav() {
 		navbar.classList.remove("sticky");
 	}
 
-	console.log(window.pageYOffset);
 	if (window.pageYOffset <= 200) {
 		navbar.classList.add("reverse");
 	} else {
