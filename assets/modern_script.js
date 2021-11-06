@@ -8,34 +8,32 @@ window.addEventListener('resize', placeNav);
 
 placeNav();
 
-
 // Get the offset position of the navbar
 function placeNav(event) {
-	header.style.height = (parseInt(window.innerHeight) - parseInt(navbar.offsetHeight)).toString() + "px";
-	console.log(header.style.height);
-	// navbar.style.height = navbar.offsetHeight + "px";
-	sticky = navbar.offsetTop;
+    header.style.height = (parseInt(window.innerHeight) - parseInt(navbar.offsetHeight)).toString() + "px";
+    console.log(header.style.height);
+    sticky = navbar.offsetTop;
 }
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyNav() {
-	if (window.pageYOffset >= sticky) {
-		navbar.classList.add("sticky")
-	} else {
-		navbar.classList.remove("sticky");
-	}
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
 
     if (window.pageYOffset == 0) {
-		navbar.classList.add("reverse")
-	}
+        navbar.classList.add("reverse");
+    } else {
+        navbar.classList.remove("reverse");
+    }
 }
 
 function responsiveNavbar() {
-	[...document.getElementsByTagName("nav")].forEach((x) => {
-		if (x.className === "nav") {
-			x.className += " responsive";
-		} else {
-			x.className = "nav";
-		}
-	});
+    if (navbar.classList.contains("responsive")) {
+        navbar.classList.remove("responsive");
+    } else {
+        navbar.classList.add("responsive");
+    }
 }

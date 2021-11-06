@@ -13,9 +13,9 @@ header {
 	background-color: #23ac551a;
 }
 
-nav {
-	background-color: #ffffff1d;
-	position: relative;
+nav, nav .holder {
+	background-color: #2E2E2E;
+    position: relative;
 	overflow: hidden;
 }
 
@@ -29,7 +29,7 @@ nav a {
 	font-weight: bold;
 }
 
-.nav-centered a {
+.nav-center a {
 	float: none;
 	position: absolute;
 	top: 50%;
@@ -94,7 +94,7 @@ main {
     nav a {
         display: none;
     }
-    nav .icon, .nav-centered a {
+    nav .icon, .nav-center a {
         display: block;
     }
     
@@ -103,12 +103,19 @@ main {
 		display: block;
 	}
 	
-	nav.responsive .nav-centered a {
+	nav.responsive .nav-center a {
 		position: relative;
 		top: 0;
 		left: 0;
 		transform: none;
 	}
+
+    nav.responsive.reverse {
+        overflow: visible;
+    }
+    nav.responsive.reverse .holder{
+        transform: translateY(-83.333%);
+    }
 
 	/* Makes a one column layout instead of a two-column layout for footer */
 	footer .left,
