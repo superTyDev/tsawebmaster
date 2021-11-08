@@ -134,6 +134,14 @@ main {
 	min-width: 300px;
 	width: 40%;
 	max-width: 500px;
+	
+	z-index: 1;
+}
+
+.slide .text-inner {
+	width: 100%;
+	height: 100%;
+
 	padding: 8px 40px;
 	box-sizing: border-box;
 
@@ -143,7 +151,6 @@ main {
 	border-radius: 2px;
 
 	text-align: center;
-	z-index: 1;
 }
 
 .button {
@@ -169,24 +176,6 @@ main {
 	animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
-	from {
-		opacity: 0.4;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes fade {
-	from {
-		opacity: 0.4;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
 .about {
 	background-color: green;
 }
@@ -195,8 +184,6 @@ main {
 	/* The image used */
 	background-image: url("gjhs.jpg");
 
-	/* Set a specific dimenstions */
-	min-height: 500px;
 	object-fit: cover;
 	width: 100%;
 
@@ -206,11 +193,11 @@ main {
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	padding: 100px 0;
+	padding: 20vh 0;
 }
 
 .about .text {
-	font-size: 7vw;
+	font-size: 9vw;
 	font-weight: 900;
 	font-family: "Lato Thick", sans-serif;
 	text-align: center;
@@ -225,11 +212,11 @@ main {
 }
 
 .about p {
-	font-size: 20px;
+	font-size: 20px; /* 4 */
 	font-weight: bold;
 	font-family: "Lato Thick", sans-serif;
-	line-height: 40px;
-	letter-spacing: 5px;
+	line-height: 40px; /* 8 */
+	letter-spacing: 5px; /* 1 */
 
 	color: white;
 	text-shadow: 2px 2px 4px #000000;
@@ -304,24 +291,6 @@ main {
 	background-color: #007ac1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.register .square {
-		/* animation-name: wipe-enter; */
-		animation-duration: 1s;
-		animation-iteration-count: infinite;
-	}
-}
-
-/* Trigger when scrolled into view */
-@keyframes wipe-enter {
-	0% {
-		transform: scale(0, 0.025);
-	}
-	50% {
-		transform: scale(1, 0.025);
-	}
-}
-
 /* Footer with nav and copyright info */
 footer {
 	position: absolute;
@@ -330,8 +299,9 @@ footer {
 	height: 10rem;
 	padding: 10px 10px;
 	background-color: #ffa000;
+	color: white;
+	font-weight: bold;
 	box-sizing: border-box;
-	display: inline;
 }
 
 footer .left,
@@ -347,6 +317,27 @@ footer .left {
 footer .right {
 	float: right;
 	width: 80%;
+}
+
+/* Scrollbar Width */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background-color: #ffa20088;
+	border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #ffa000;
 }
 
 /* Mobile Styles */
@@ -390,24 +381,48 @@ footer .right {
 	}
 }
 
-/* Scrollbar Width */
-::-webkit-scrollbar {
-	width: 5px;
+@media (prefers-reduced-motion: no-preference) {
+	.register .square {
+		animation: wipe-enter 1s;
+	}
+
+	.slide .text-inner {
+		animation: wipe-enter 0.8s ease-out;
+	}
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey;
+@-webkit-keyframes wipe-enter {
+	0% {
+		transform: scale(0, 0.025);
+	}
+	40% {
+		transform: scale(1, 0.025);
+	}
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background-color: #ffa20088;
-	border-radius: 5px;
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, 0.025);
+	}
+	40% {
+		transform: scale(1, 0.025);
+	}
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: #ffa000;
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}

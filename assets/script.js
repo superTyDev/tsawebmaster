@@ -17,10 +17,10 @@ function responsiveNavbar() {
 }
 
 var slideIndex = 1;
-showSlides(slideIndex);
-setInterval(function () {
+var slideInterval = setInterval(function () {
 	plusSlides(1);
 }, 10000);
+showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
@@ -40,5 +40,10 @@ function showSlides(n) {
 		slides[i].style.display = "none";
 	}
 	slides[slideIndex - 1].style.display = "block";
+	clearInterval(slideInterval);
+	slideInterval = setInterval(function () {
+		plusSlides(1);
+	}, 10000);
 }
+
 
