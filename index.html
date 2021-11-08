@@ -1,210 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<!-- Set info for accessibility -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Homepage for the Prism concert series at George Jenkins"
+		/>
 
-<head>
-	<!-- Set info for accessibility -->
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="Homepage for the Prism concert series at George Jenkins" />
+		<title>Prism Concerts</title>
 
-	<title>Prism at George Jenkins</title>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/prism.ico" />
+		<link rel="icon" type="image/jpg" href="assets/prism.jpg" />
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="assets/prism.ico" />
-	<link rel="icon" type="image/jpg" href="assets/prism.jpg" />
+		<!-- Load an icon library -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 
-	<!-- Load an icon library -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<!-- Load main styles -->
+		<link rel="stylesheet" href="assets/modern_style.css" />
+	</head>
 
-	<!-- Load main styles -->
-	<link rel="stylesheet" href="assets/style.css" />
-</head>
-
-<body>
-	<nav class="nav">
-		<a href="#home">Prism Concerts</a>
-		<a href="#schedule">Schedule</a>
-		<a href="#register">Register</a>
-		<a href="#about">About</a>
-		<a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
-			<i class="fa fa-bars"></i>
-		</a>
-	</nav>
-	<main>
-		<div class="slideshow">
-			<div class="slide fade">
-				<video autoplay muted loop>
-					<source src="assets/winter.mp4" type="video/mp4" />
-					Winter Timelapse [Unsupported Browser]
-				</video>
-				<div class="text">
-					<div class="text-inner">
-						<h2>Winter Timelapse</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-							sit amet urna blandit, eleifend massa id, elementum velit. Quisque
-							rutrum pretium augue, eget congue sapien sollicitudin quis.
-						</p>
-						<p>
-							<a class="button" href="#seemore">See More</a>
-						</p>
-					</div>
+	<body>
+		<header>
+			<div class="info">
+				<div class="title fade">
+					<h1>Prism<br />Concerts</h1>
 				</div>
-			</div>
-
-			<div class="slide fade">
-				<video autoplay muted loop>
-					<source src="assets/world.mp4" type="video/mp4" />
-					World Tour [Unsupported Browser]
-				</video>
-				<div class="text">
-					<div class="text-inner">
-						<h2>World Tour</h2>
-						<p>
-							Donec non commodo enim, nec condimentum nulla. Fusce nulla dui,
-							commodo non metus nec, facilisis blandit lectus.
-						</p>
-						<p>
-							<a class="button" href="#seemore">See More</a>
-						</p>
-					</div>
+				<div class="slideshow">
+					<h2 class="slide fade">A Creative Showcase</h2>
+					<h2 class="slide fade">A Collection of Art</h2>
+					<h2 class="slide fade">A Multitude of Talent</h2>
 				</div>
+				<h3 class="morebutton fade">
+					<a href="#more">Learn More <i class="jump">→</i></a>
+				</h3>
 			</div>
-
-			<div class="slide fade">
-				<video autoplay muted loop>
-					<source src="assets/sailing.mp4" type="video/mp4" />
-					Sailing Timelapse [Unsupported Browser]
-				</video>
-				<div class="text">
-					<div class="text-inner">
-						<h2>Sailing Timelapse</h2>
-						<p>
-							Morbi non sapien justo. Cras quis rutrum urna, vitae ornare
-							turpis.
-						</p>
-						<p>
-							<a class="button" href="#seemore">See More</a>
-						</p>
-					</div>
+		</header>
+		<nav class="reverse">
+			<div class="holder">
+				<div class="nav-center">
+					<a href="#home">PRISM CONCERTS</a>
 				</div>
-			</div>
 
-			<div class="slide fade">
-				<video autoplay muted loop>
-					<source src="assets/earth.mp4" type="video/mp4" />
-					Earth From Space [Unsupported Browser]
-				</video>
-				<div class="text">
-					<div class="text-inner">
-						<h2>Earth From Space</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-							sit amet urna blandit, eleifend massa id, elementum velit. Quisque
-							rutrum pretium augue, eget congue sapien sollicitudin quis.
-						</p>
-						<p>
-							<a class="button" href="#seemore">See More</a>
-						</p>
-					</div>
+				<a href="#about">About</a>
+				<a href="#schedule">Schedule</a>
+
+				<div class="nav-right">
+					<a href="#register">Register</a>
+					<a href="#login">Login</a>
 				</div>
-			</div>
 
-			<div class="slide fade">
-				<video autoplay muted loop>
-					<source src="assets/waterfall.mp4" type="video/mp4" />
-					Waterfall Timelapse [Unsupported Browser]
-				</video>
-				<div class="text">
-					<div class="text-inner">
-						<h2>Waterfall Timelapse</h2>
-						<p>
-							Donec non commodo enim, nec condimentum nulla. Fusce nulla dui,
-							commodo non metus nec, facilisis blandit lectus.
-						</p>
-						<p>
-							<a class="button" href="#seemore">See More</a>
-						</p>
-					</div>
-				</div>
+				<a href="javascript:void(0);" class="icon" onclick="responsiveNavbar()">
+					<i class="fa fa-bars"></i>
+				</a>
 			</div>
+		</nav>
+		<main>main</main>
+		<main>main extra</main>
+		<footer>f<br />o<br />o<br />t<br />e<br />r</footer>
 
-			<div class="slide fade">
-				<video autoplay muted loop>
-					<source src="assets/fire.mp4" type="video/mp4" />
-					Fire Flies [Unsupported Browser]
-				</video>
-				<div class="text">
-					<div class="text-inner">
-						<h2>Fire Flies</h2>
-						<p>
-							Morbi non sapien justo. Cras quis rutrum urna, vitae ornare
-							turpis.
-						</p>
-						<p>
-							<a class="button" href="#seemore">See More</a>
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- Next and previous buttons -->
-			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
-		</div>
-		<div class="about">
-			<div class="parallax">
-				<h1 class="text">Prism Concerts</h1>
-				<p>
-					Curabitur eget dapibus dolor. Suspendisse placerat turpis in erat
-					pretium tempor. Mauris pharetra erat porttitor sollicitudin
-					vulputate. Etiam posuere elit non sagittis posuere. Mauris libero
-					magna, pharetra ac quam nec, aliquet tempus sapien.
-				</p>
-			</div>
-		</div>
-		<div class="upcoming">
-			<h2>Upcoming</h2>
-			<div class="card"==>
-				<img src="assets/orchestra.jpg" alt="Avatar" />
-				<div class="container">
-					<h3><b>Panama Philharmonic on September 20</b></h3>
-					<p>
-						Mauris pharetra erat porttitor sollicitudin vulputate. Etiam
-						posuere elit non sagittis posuere. Mauris libero magna, pharetra
-						ac quam nec, aliquet tempus sapien.
-					</p>
-				</div>
-			</div>
-			<div class="card">
-				<img src="assets/orchestra.jpg" alt="Avatar" />
-				<div class="container">
-					<h3><b>Culinary Cut-Out on October 6</b></h3>
-					<p>
-						Mauris pharetra erat porttitor sollicitudin vulputate. Etiam
-						posuere elit non sagittis posuere. Mauris libero magna, pharetra
-						ac quam nec, aliquet tempus sapien.
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="register">
-			<div class="square">
-				<h2>Get Registered</h2>
-				<p>Come join the party!</p>
-				<a class="button">Register</a>
-			</div>
-		</div>
-	</main>
-	<footer>
-		<div class="left">Prism at George Jenkins</div>
-		<div class="right">
-			© 2021 Tyson McLaws and Pierre Etienne Boisvert, All Rights Reserved
-		</div>
-	</footer>
-
-	<script src="assets/script.js"></script>
-</body>
-
+		<script src="assets/modern_script.js"></script>
+	</body>
 </html>
