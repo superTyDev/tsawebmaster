@@ -148,7 +148,7 @@ nav.shrink a {
 }
 
 .main:nth-child(2) {
-  background: purple;
+  background: #d32f2f;
   color: white;
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
   padding: 10rem 20%;
