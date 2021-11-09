@@ -7,6 +7,9 @@ var sticky = navbar.offsetTop;
 var slideIndex = 1;
 var slideInterval = setInterval(nextSlide, 1000);
 
+var eventNames = ["Pennsylvania Orchestra", "Parsley Potatoes", "Oregeon Orchestra"];
+var eventInfo = ["orchestra pennsylvania september 9/23 pop", "culinary food parsley potatoes"];
+
 window.onscroll = function () {
 	stickyNav();
 };

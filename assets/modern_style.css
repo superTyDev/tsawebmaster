@@ -13,11 +13,11 @@ body {
     font-family: "Zen Kurenaido", sans-serif;
 }
 a {
-    color: #d32f2f;
+    color: #31cc31;
 }
 header {
-    background-color: #d32f2f;
-    background: linear-gradient(239deg, #d32f2f, #0d324d);
+    background-color: #31cc31;
+    background: linear-gradient(239deg, #31cc31, #0d324d);
     background-size: 400% 400%;
     -webkit-animation: AnimationName 30s ease infinite;
     -moz-animation: AnimationName 30s ease infinite;
@@ -80,7 +80,7 @@ nav .holder {
 }
 nav a {
     float: left;
-    color: #d32f2f;
+    color: #31cc31;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
@@ -99,7 +99,7 @@ nav a {
     float: right;
 }
 nav a:hover {
-    background-color: #ff6659;
+    background-color: #72ff64;
     color: black;
 }
 nav .icon {
@@ -126,9 +126,10 @@ main>div {
     padding: 2rem 20%;
 }
 .slant {
-    background: #d32f2f;
+    background: #009a00;
     clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
     padding: 10rem 20%;
+    color: black;
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -215,7 +216,7 @@ hr {
 }
 /* Set a style for the submit/register button */
 .registerbtn {
-    background-color: #d32f2f;
+    background-color: #31cc31;
     color: white;
     padding: 16px 20px;
     margin: 8px 0;
@@ -248,7 +249,7 @@ hr {
 }
 footer {
     background-color: #2e2e2e;
-    color: #d32f2f;
+    color: #31cc31;
     padding: 10px;
 }
 /* Scrollbar Width */
@@ -261,12 +262,12 @@ footer {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background-color: #d32f2f88;
+    background-color: #31cc3188;
     border-radius: 5px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #d32f2f;
+    background: #31cc31;
 }
 @-webkit-keyframes fade {
     from {
