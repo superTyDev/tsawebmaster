@@ -45,5 +45,3 @@ function showSlides(n) {
 		plusSlides(1);
 	}, 10000);
 }
-
-
