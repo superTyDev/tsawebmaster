@@ -7,10 +7,40 @@
 	--color-nav: #2e2e2e;
 	--color-card: #1e1e1e;
 	--color-text: white;
+	--color-text-header: white;
+	--color-text-nav: var(--color-primary);
 	--color-text-theme: black;
+	--color-input: #242434;
+	--color-input-focus: #333333;
 }
-/* .theme-light {
-} */
+.theme-contrast {
+	--color-primary: black;
+	--color-primary-light: white;
+	--color-primary-dark: black;
+	--color-background: white;
+	--color-nav: white;
+	--color-card: white;
+	--color-text: black;
+	--color-text-header: white;
+	--color-text-nav: var(--color-primary-dark);
+	--color-text-theme: white;
+	--color-input: white;
+	--color-input-focus: white;
+}
+.theme-light {
+ --color-primary: #31cc31;
+	--color-primary-light: #72ff64;
+	--color-primary-dark: #009a00;
+	--color-background: #eeeeee;
+	--color-nav: #bbbbbb;
+	--color-card: #dddddd;
+	--color-text: black;
+	--color-text-header: white;
+	--color-text-nav: var(--color-primary-dark);
+	--color-text-theme: black;
+	--color-input: #f1f1f1;
+	--color-input-focus: #ddd;
+}
 * {
 	box-sizing: border-box;
 }
@@ -30,6 +60,7 @@ a {
 header {
 	background-color: var(--color-primary);
 	background: linear-gradient(239deg, var(--color-primary), #0d324d);
+	color: var(--color-text-header);
 	background-size: 400% 400%;
 	-webkit-animation: AnimationName 30s ease infinite;
 	-moz-animation: AnimationName 30s ease infinite;
@@ -69,7 +100,7 @@ header .info h3:hover {
 }
 header .info a {
 	text-decoration: none;
-	color: white;
+	color: var(--color-text-header);
 }
 header .info .jump {
 	transition: padding 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -92,7 +123,7 @@ nav .holder {
 }
 nav a {
 	float: left;
-	color: var(--color-primary);
+	color: var(--color-text-nav);
 	text-align: center;
 	text-decoration: none;
 	font-weight: bold;
@@ -157,7 +188,7 @@ img {
 	border-radius: 2px 2px 0 0;
 }
 .card .container {
-	padding: 2px 16px;
+	padding: 6px 16px;
 }
 .row {
 	display: flex;
@@ -171,25 +202,30 @@ img {
 	padding: 0 4px;
 }
 .column img {
-	margin-top: 8px;
 	vertical-align: middle;
 	width: 100%;
 }
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+select {
 	width: 100%;
 	padding: 15px;
 	margin: 5px 0 22px 0;
 	display: inline-block;
 	border: none;
-	background: #242424;
-	caret-color: white;
-	color: white;
+	background: var(--color-input);
+	caret-color: var(--color-text);
+	color: var(--color-text);
 }
 input[type="text"]:focus,
-input[type="password"]:focus {
-	background-color: #333333;
+input[type="password"]:focus,
+select:focus {
+	background-color: var(--color-input-focus);
 	outline: none;
+}
+.theme-contrast input[type="text"]:focus,
+.theme-contrast input[type="password"]:focus {
+	outline: solid;
 }
 .autocomplete {
 	position: relative;
@@ -223,7 +259,7 @@ input[type="password"]:focus {
 }
 /* Overwrite default styles of hr */
 hr {
-	border: 1px solid #f1f1f1;
+	border: 1px solid var(--color-text);
 	margin-bottom: 25px;
 }
 /* Set a style for the submit/register button */
@@ -260,9 +296,21 @@ hr {
 	}
 }
 footer {
-	background-color: #2e2e2e;
-	color: var(--color-primary);
+	background-color: var(--color-nav);
+	color: var(--color-text-nav);
 	padding: 10px;
+}
+footer form {
+				display: flex;
+}
+footer form label {
+				padding: 
+}
+footer form select {
+				flex-grow: 1;
+}
+.theme-contrast footer {
+	border-top: 1px solid black;
 }
 /* Scrollbar Width */
 ::-webkit-scrollbar {

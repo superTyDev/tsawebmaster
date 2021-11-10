@@ -15,6 +15,7 @@ var eventNames = [
 var eventInfo = [
 	"orchestra pennsylvania september 9/23 pop",
 	"culinary food parsley potatoes",
+	"orchestra oregeon november 9/23 classical"
 ];
 
 window.onscroll = function () {
@@ -87,20 +88,13 @@ function setTheme(themeName) {
 	localStorage.setItem("theme", themeName);
 	document.documentElement.className = themeName;
 }
-// function to toggle between light and dark theme
-function toggleTheme() {
-	if (localStorage.getItem("theme") === "theme-dark") {
-		setTheme("theme-light");
-	} else {
-		setTheme("theme-dark");
-	}
-}
-// Immediately invoked function to set the theme on initial load
+
 (function () {
-	if (localStorage.getItem("theme") === "theme-dark") {
-		setTheme("theme-dark");
-	} else {
+	if (localStorage.getItem("theme") === "theme-light") {
 		setTheme("theme-light");
+	} else if (localStorage.getItem("theme") === "theme-contrast") {
+	 setTheme("theme-contrast");
+	} else {
+		setTheme("theme-dark");
 	}
-	setTheme("theme-dark");
 })();
