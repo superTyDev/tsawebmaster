@@ -123,14 +123,18 @@
                     <h2>Register</h2>
                     <p>Please fill in this form to create an account.</p>
                     <hr>
-
                     <label for="email"><b>Email</b></label>
                     <input type="text" placeholder="Enter Email" name="email" id="email" required>
-
-                    <div class="autocomplete">
-                        <label for="event"><b>Event</b></label>
-                        <input type="text" placeholder="Select an Event" name="event" id="event" required>
-                    </div>
+                    <label for="event"><b>Event</b></label>
+                    <input list="event" name="event" placeholder="Select Event">
+  <datalist id="event">
+    <option value="Oregon Orchestra">Featuring Orange Orangutan on Jan 3 & 4 2065</option>
+    <option value="Panama Philharmonic">Featuring Pasley Potato on March 32 & 34 1934</option>
+    <option value="Oregon Orchestra">Featuring Orange Orangutan on Jan 5 & 6 2066</option>
+    <option value="Panama Philharmonic">Featuring Pasley Potato on March 32 & 34 1934</option>
+    <option value="Oregon Orchestra">Featuring Orange Orangutan on May 9 20101</option>
+    <option value="Panama Philharmonic">Featuring Pasley Potato on  July 3 1812</option>
+  </datalist>        
                     <hr>
 
                     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>

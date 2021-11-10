@@ -1,7 +1,7 @@
 // Get the navbar
 var navbar = document.getElementsByTagName("nav")[0];
 var header = document.getElementsByTagName("header")[0];
-
+var theme = document.getElementById("theme");
 var sticky = navbar.offsetTop;
 
 var slideIndex = 1;
@@ -87,6 +87,7 @@ function showSlides(n) {
 function setTheme(themeName) {
 	localStorage.setItem("theme", themeName);
 	document.documentElement.className = themeName;
+	theme.value = themeName;
 }
 
 (function () {

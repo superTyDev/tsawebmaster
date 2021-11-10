@@ -207,6 +207,7 @@ img {
 }
 input[type="text"],
 input[type="password"],
+input[list],
 select {
 	width: 100%;
 	padding: 15px;
@@ -219,6 +220,7 @@ select {
 }
 input[type="text"]:focus,
 input[type="password"]:focus,
+input[list]:focus,
 select:focus {
 	background-color: var(--color-input-focus);
 	outline: none;
@@ -226,6 +228,12 @@ select:focus {
 .theme-contrast input[type="text"]:focus,
 .theme-contrast input[type="password"]:focus {
 	outline: solid;
+}
+
+#theme {
+				width: inherit;
+				padding: 8px 2px;
+				background-color: var(--color-input-focus);
 }
 .autocomplete {
 	position: relative;
@@ -299,15 +307,6 @@ footer {
 	background-color: var(--color-nav);
 	color: var(--color-text-nav);
 	padding: 10px;
-}
-footer form {
-				display: flex;
-}
-footer form label {
-				padding: 
-}
-footer form select {
-				flex-grow: 1;
 }
 .theme-contrast footer {
 	border-top: 1px solid black;
