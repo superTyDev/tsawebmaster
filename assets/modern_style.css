@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap");
+.theme-dark {
+				--color-primary: #31cc31;
+				--color-primary-light: #72ff64;
+				--color-primary-dark: #009a00;
+				--color-background: #121212;
+				--color-text: white;
+}
+.theme-light {
+				
+}
 * {
     box-sizing: border-box
 }
@@ -8,16 +18,16 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: white;
+    background-color: var(--color-background);
+    color: var(--color-text);
     font-family: "Zen Kurenaido", sans-serif;
 }
 a {
-    color: #31cc31;
+    color: var(--color-primary);
 }
 header {
-    background-color: #31cc31;
-    background: linear-gradient(239deg, #31cc31, #0d324d);
+    background-color: var(--color-primary);
+    background: linear-gradient(239deg, var(--color-primary), #0d324d);
     background-size: 400% 400%;
     -webkit-animation: AnimationName 30s ease infinite;
     -moz-animation: AnimationName 30s ease infinite;
@@ -80,7 +90,7 @@ nav .holder {
 }
 nav a {
     float: left;
-    color: #31cc31;
+    color: var(--color-primary);
     text-align: center;
     text-decoration: none;
     font-weight: bold;
@@ -99,7 +109,7 @@ nav a {
     float: right;
 }
 nav a:hover {
-    background-color: #72ff64;
+    background-color: var(--color-primary-light);
     color: black;
 }
 nav .icon {
@@ -126,7 +136,7 @@ main>div {
     padding: 2rem 20%;
 }
 .slant {
-    background: #009a00;
+    background: var(--color-primary-dark);
     clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
     padding: 10rem 20%;
     color: black;
@@ -216,7 +226,7 @@ hr {
 }
 /* Set a style for the submit/register button */
 .registerbtn {
-    background-color: #31cc31;
+    background-color: var(--color-primary);
     color: white;
     padding: 16px 20px;
     margin: 8px 0;
@@ -249,7 +259,7 @@ hr {
 }
 footer {
     background-color: #2e2e2e;
-    color: #31cc31;
+    color: var(--color-primary);
     padding: 10px;
 }
 /* Scrollbar Width */
@@ -262,12 +272,12 @@ footer {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background-color: #31cc3188;
+    background-color: --color-primary88;
     border-radius: 5px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #31cc31;
+    background: var(--color-primary);
 }
 @-webkit-keyframes fade {
     from {
