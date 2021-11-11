@@ -7,17 +7,6 @@ var sticky = navbar.offsetTop;
 var slideIndex = 1;
 var slideInterval = setInterval(nextSlide, 1000);
 
-var eventNames = [
-	"Pennsylvania Orchestra",
-	"Parsley Potatoes",
-	"Oregeon Orchestra",
-];
-var eventInfo = [
-	"orchestra pennsylvania september 9/23 pop",
-	"culinary food parsley potatoes",
-	"orchestra oregeon november 9/23 classical"
-];
-
 window.onscroll = function () {
 	stickyNav();
 };
@@ -94,8 +83,16 @@ function setTheme(themeName) {
 	if (localStorage.getItem("theme") === "theme-light") {
 		setTheme("theme-light");
 	} else if (localStorage.getItem("theme") === "theme-contrast") {
-	 setTheme("theme-contrast");
+		setTheme("theme-contrast");
 	} else {
 		setTheme("theme-dark");
 	}
 })();
+
+function validateForm() {
+	var x = document.forms["myForm"]["fname"].value;
+	if (x == "") {
+		alert("Name must be filled out");
+		return false;
+	}
+}
